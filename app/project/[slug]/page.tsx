@@ -18,7 +18,7 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
 
   return (
     <Suspense fallback={<div>Loading...</div>}>
-      <Navbar />
+      {/* <Navbar /> */}
       <ProjectDetails project={project} />
     </Suspense>
   );
