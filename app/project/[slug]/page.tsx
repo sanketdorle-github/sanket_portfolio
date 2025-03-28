@@ -2,6 +2,7 @@ import { Suspense } from "react";
 import ProjectDetails from "@/app/components/ProjectDetails";
 import { projects } from "@/app/data/projects";
 import Navbar from "@/app/components/Navbar";
+import NetflixRotatingLoader from "@/app/components/NetflixRotatingLoader";
 
 export async function generateStaticParams() {
   return projects.map((project) => ({
@@ -16,9 +17,10 @@ export default function ProjectPage({ params }: { params: { slug: string } }) {
     return <div className="text-white text-center">Project not found</div>;
   }
 
-  return (
-    <Suspense fallback={<div>Loading...</div>}>
-      {/* <Navbar /> */}
+  return (<Suspense fallback={<NetflixRotatingLoader 
+    text={ "Loading..." }
+    fullScreen={true}
+  />}>
       <ProjectDetails project={project} />
     </Suspense>
   );

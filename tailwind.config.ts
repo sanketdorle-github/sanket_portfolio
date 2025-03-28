@@ -85,10 +85,26 @@ const config: Config = {
             height: "0",
           },
         },
+        'netflix-pulse': {
+					'0%, 100%': { 
+						opacity: '1',
+						transform: 'scale(1)'
+					},
+					'50%': { 
+						opacity: '0.5',
+						transform: 'scale(0.85)'
+					}
+				},
+				'netflix-rotate': {
+					'0%': { transform: 'rotate(0deg)' },
+					'100%': { transform: 'rotate(360deg)' }
+				}
       },
       animation: {
         "accordion-down": "accordion-down 0.2s ease-out",
         "accordion-up": "accordion-up 0.2s ease-out",
+        'netflix-pulse': 'netflix-pulse 1.5s ease-in-out infinite',
+				'netflix-rotate': 'netflix-rotate 1.2s linear infinite'
       },
     },
   },
