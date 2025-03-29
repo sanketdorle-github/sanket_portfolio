@@ -97,15 +97,25 @@ export default function Navbar() {
             >
               <div className="px-2 pt-2 pb-3 space-y-1">
                 {navItems.map((item) => (
+                  // <motion.a
+                  //   key={item.name}
+                  //   href={item.href}
+                  //   className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md"
+                  //   whileHover={{ x: 10 }}
+                  //   onClick={() => setIsOpen(false)}
+                  // >
+                  //   {item.name}
+                  // </motion.a>
+                  <Link key={item.name} href={item.href} passHref legacyBehavior>
                   <motion.a
-                    key={item.name}
-                    href={item.href}
+                    onClick={() => setIsOpen(false)}
                     className="block px-3 py-2 text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 rounded-md"
                     whileHover={{ x: 10 }}
-                    onClick={() => setIsOpen(false)}
                   >
                     {item.name}
                   </motion.a>
+                </Link>
+                
                 ))}
               </div>
             </motion.div>
