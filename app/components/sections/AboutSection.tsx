@@ -5,7 +5,7 @@ import Link from "next/link";
 const AboutSection = () => {
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Resume.pdf"; // Ensure your file is in the `public` folder
+    link.href = "/Resume1.pdf"; // Ensure your file is in the `public` folder
     link.download = "Sanket_Resume.pdf"; // The file name after download
     document.body.appendChild(link);
     link.click();
@@ -73,7 +73,7 @@ const AboutSection = () => {
 
               <div className="space-y-4 text-gray-300">
                 <p>
-                  With over 1.5 years of experience as a full-stack developer,
+                  With over 1+ years of experience as a full-stack developer,
                   I've dedicated my career to creating seamless, user-focused
                   applications that solve real-world problems. My journey in the
                   world of development began with a fascination for how
